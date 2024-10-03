@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - chatbotflaskapi
+name: Build and deploy Python app to Azure Web App - chatBotFlaskApi
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2BB7EBD6C6D04883A7080D39E08E69EB }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9C122DB6A4A7499AB44685DDE4AF6677 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_11648A811EC74DB4888ECF1A84CBD82A }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_69B425C39E3F43F19D702F4DEE6ECA53 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_386FA36A4FD14E438FA476A9EB2A64F1 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BEEDC07F998A4E0BA87A43041A4CB210 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'chatbotflaskapi'
+          app-name: 'chatBotFlaskApi'
           slot-name: 'Production'
           
